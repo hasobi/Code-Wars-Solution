@@ -1,9 +1,7 @@
 def my_languages(results):
-    finalArray = []
-    # a berupa list of list jadi iterasi harus berupa list biasa
-    a = sorted(results.items(), key=lambda x: x[1], reverse=True)    
-    
-    print(type(a))
-
-
-my_languages({"Hindi": 60, "Dutch": 93, "Greek": 71})
+    array_list = []
+    sorted_results = (sorted(results.items(), key = lambda k: k[1], reverse = True))
+    for i in sorted_results:
+        if i[1]>=60:
+            array_list.append(i[0])
+    return array_list
